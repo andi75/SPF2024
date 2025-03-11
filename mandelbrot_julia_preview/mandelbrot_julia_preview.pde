@@ -76,15 +76,15 @@ void drawFractal(int xOrig, int yOrig, int w, int h, boolean isJulia)
       float tx = (float)(x) / (float)w;
       float ty = (float)(y) / (float)h;
       
-      // compute c inside the zMin/zMax range
+      // compute starting z inside the zMin/zMax range
       float z[] = new float[2];
       z[0] = zMin[0] + tx * (zMax[0] - zMin[0]);
       z[1] = zMax[1] + ty * (zMin[1] - zMax[1]);
       
       // set z = c, n = 0
       float c[];
-      if(!isJulia) { c = zcopy(z); }
-      else { c = cJulia; }
+      if(isJulia) { c = cJulia; }
+      else { c = zcopy(z); }
       int n = 0;
       
       // while n < 256 and |z| < 2: compute z = z^2 + c
