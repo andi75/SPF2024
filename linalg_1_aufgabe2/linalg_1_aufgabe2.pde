@@ -49,11 +49,20 @@ void draw()
   line( x(c[0]), y(c[1]), x(a[0]), y(a[1]) );
   
   // problem2a: rotate by 60 degrees
-  float alpha = 60 * PI / 180;
-  float[] m = { cos(alpha), sin(alpha), -sin(alpha), cos(alpha) };
+  // float alpha = 60 * PI / 180;
+  // float[] m = { cos(alpha), sin(alpha), -sin(alpha), cos(alpha) };
   // problem2b: scale by 0.5
   // float k = 0.5
-  // float[] m = ....
+  // float[] m = { k, 0, 0, k };
+  // problem2c: rotate by 90 degrees and scale by 1.5
+  // float[] m = { 0, 1.5, -1.5, 0 };
+  // problem 2d: shear by 1 along the x-axis
+  // float[] m = { 1, 0, 1, 1 };
+  // problem 2e: shear by -1 along the y-axis
+  // float[] m = { 1, -1, 0, 1 };
+  // problem 2f: shear by 1 along y=x
+  float[] m = { 0, -1, 1, 2 };
+  
   
   a = transform(m, a);
   b = transform(m, b);
