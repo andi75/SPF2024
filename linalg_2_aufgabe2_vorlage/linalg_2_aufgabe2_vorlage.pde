@@ -3,6 +3,7 @@ void setup()
   size(500, 500);
   frameRate(60);
   // no animation
+  noLoop();
 }
 
 float x(float mx) {
